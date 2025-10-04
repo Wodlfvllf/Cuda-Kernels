@@ -1,0 +1,3 @@
+# ninja log v7
+0	5051	1759577745626870035	/root/Cuda-Kernels/groupnorm-kernel/build/temp.linux-x86_64-cpython-311/src/groupnorm.o	385f1fe224953db0
+0	10631	1759577745626870035	/root/Cuda-Kernels/groupnorm-kernel/build/temp.linux-x86_64-cpython-311/src/groupnorm_ops.o	7bbdf99f7ef9d0e2

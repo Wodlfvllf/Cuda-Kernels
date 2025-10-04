@@ -1,0 +1,36 @@
+ninja_required_version = 1.3
+cxx = c++
+nvcc = /opt/rocm-6.4.1/bin/hipcc
+
+cflags = -pthread -B /root/anaconda3/envs/Shashank/compiler_compat -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /root/anaconda3/envs/Shashank/include -fPIC -O2 -isystem /root/anaconda3/envs/Shashank/include -fPIC -I/root/anaconda3/envs/Shashank/lib/python3.11/site-packages/torch/include -I/root/anaconda3/envs/Shashank/lib/python3.11/site-packages/torch/include/torch/csrc/api/include -I/root/anaconda3/envs/Shashank/lib/python3.11/site-packages/torch/include/THH -I/opt/rocm-6.4.1/include -I/root/anaconda3/envs/Shashank/include/python3.11 -c
+post_cflags = -D__HIP_PLATFORM_AMD__=1 -DUSE_ROCM=1 -DHIPBLAS_V2 -fPIC -D__HIP_PLATFORM_AMD__=1 -DUSE_ROCM=1 -DHIPBLAS_V2 -fPIC -O3 -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1016"' -DTORCH_EXTENSION_NAME=groupnorm_cuda -std=c++17
+cuda_cflags = -I/root/anaconda3/envs/Shashank/lib/python3.11/site-packages/torch/include -I/root/anaconda3/envs/Shashank/lib/python3.11/site-packages/torch/include/torch/csrc/api/include -I/root/anaconda3/envs/Shashank/lib/python3.11/site-packages/torch/include/THH -I/opt/rocm-6.4.1/include -I/root/anaconda3/envs/Shashank/include/python3.11 -c
+cuda_post_cflags = -D__HIP_PLATFORM_AMD__=1 -DUSE_ROCM=1 -DHIPBLAS_V2 -fPIC -DCUDA_HAS_FP16=1 -D__HIP_NO_HALF_OPERATORS__=1 -D__HIP_NO_HALF_CONVERSIONS__=1 -DHIP_ENABLE_WARP_SYNC_BUILTINS=1 -O3 -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1016"' -DTORCH_EXTENSION_NAME=groupnorm_cuda --offload-arch=gfx900 --offload-arch=gfx906 --offload-arch=gfx908 --offload-arch=gfx90a --offload-arch=gfx942 --offload-arch=gfx1030 --offload-arch=gfx1100 --offload-arch=gfx1101 --offload-arch=gfx1102 --offload-arch=gfx1200 --offload-arch=gfx1201 -fno-gpu-rdc -std=c++17
+cuda_dlink_post_cflags = 
+sycl_dlink_post_cflags = 
+ldflags = 
+
+rule compile
+  command = $cxx -MMD -MF $out.d $cflags -c $in -o $out $post_cflags
+  depfile = $out.d
+  deps = gcc
+
+rule cuda_compile
+  command = $nvcc  $cuda_cflags -c $in -o $out $cuda_post_cflags
+
+
+
+
+
+
+
+build /root/Cuda-Kernels/groupnorm-kernel/build/temp.linux-x86_64-cpython-311/src/groupnorm.o: cuda_compile /root/Cuda-Kernels/groupnorm-kernel/src/groupnorm.cu
+build /root/Cuda-Kernels/groupnorm-kernel/build/temp.linux-x86_64-cpython-311/src/groupnorm_ops.o: compile /root/Cuda-Kernels/groupnorm-kernel/src/groupnorm_ops.cpp
+
+
+
+
+
+
+
+

@@ -1,0 +1,3 @@
+# ninja log v7
+0	4918	1759575519778400296	/root/Cuda-Kernels/cross-entropy-loss-kernel/build/temp.linux-x86_64-cpython-311/src/cross_entropy_loss.o	70401a12ccd7d18d
+0	10476	1759575519778400296	/root/Cuda-Kernels/cross-entropy-loss-kernel/build/temp.linux-x86_64-cpython-311/src/cross_entropy_loss_ops.o	5d2447b2d18c2ad9

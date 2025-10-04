@@ -1,0 +1,8 @@
+setup.py
+embedding_lookup_cuda.egg-info/PKG-INFO
+embedding_lookup_cuda.egg-info/SOURCES.txt
+embedding_lookup_cuda.egg-info/dependency_links.txt
+embedding_lookup_cuda.egg-info/top_level.txt
+src/embedding_lookup.cu
+src/embedding_lookup_ops.cpp
+tests/test_correctness.py

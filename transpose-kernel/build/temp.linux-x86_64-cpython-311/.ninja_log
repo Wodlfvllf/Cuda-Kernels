@@ -1,0 +1,4 @@
+# ninja log v7
+0	4890	1759577065041996526	/root/Cuda-Kernels/transpose-kernel/build/temp.linux-x86_64-cpython-311/src/transpose.o	b89dabd2a0f63ad9
+0	4901	1759577065041996526	/root/Cuda-Kernels/transpose-kernel/build/temp.linux-x86_64-cpython-311/src/optimized_transpose.o	25b8e39d0ad2433b
+1	10648	1759577065042996514	/root/Cuda-Kernels/transpose-kernel/build/temp.linux-x86_64-cpython-311/src/transpose_ops.o	2fed391827972324

@@ -1,0 +1,8 @@
+setup.py
+dropout_cuda.egg-info/PKG-INFO
+dropout_cuda.egg-info/SOURCES.txt
+dropout_cuda.egg-info/dependency_links.txt
+dropout_cuda.egg-info/top_level.txt
+src/dropout.cu
+src/dropout_ops.cpp
+tests/test_correctness.py

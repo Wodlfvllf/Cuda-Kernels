@@ -1,0 +1,8 @@
+setup.py
+cross_entropy_loss_cuda.egg-info/PKG-INFO
+cross_entropy_loss_cuda.egg-info/SOURCES.txt
+cross_entropy_loss_cuda.egg-info/dependency_links.txt
+cross_entropy_loss_cuda.egg-info/top_level.txt
+src/cross_entropy_loss.cu
+src/cross_entropy_loss_ops.cpp
+tests/test_correctness.py

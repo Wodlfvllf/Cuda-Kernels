@@ -1,0 +1,8 @@
+setup.py
+adamw_cuda.egg-info/PKG-INFO
+adamw_cuda.egg-info/SOURCES.txt
+adamw_cuda.egg-info/dependency_links.txt
+adamw_cuda.egg-info/top_level.txt
+src/adamw.cu
+src/adamw_ops.cpp
+tests/test_correctness.py

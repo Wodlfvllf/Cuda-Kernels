@@ -1,0 +1,21 @@
+#ifndef NAIVE_SOFTMAX_CUH
+#define NAIVE_SOFTMAX_CUH
+
+#include <hip/hip_runtime.h>
+
+template<typename T>
+__global__ void naive_softmax_kernel(
+    const T* input,
+    T* output,
+    int rows,
+    int cols
+);
+
+void naive_softmax_forward(
+    const float* input,
+    float* output,
+    int rows,
+    int cols
+);
+
+#endif

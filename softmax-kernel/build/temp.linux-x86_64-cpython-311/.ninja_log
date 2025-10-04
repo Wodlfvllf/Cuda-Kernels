@@ -1,0 +1,4 @@
+# ninja log v7
+0	4947	1759574205788201426	/root/Cuda-Kernels/softmax-kernel/build/temp.linux-x86_64-cpython-311/src/naive_softmax.o	f471c568407ac140
+0	4970	1759574205788201426	/root/Cuda-Kernels/softmax-kernel/build/temp.linux-x86_64-cpython-311/src/optimized_softmax.o	7cf8ddbc858846d5
+0	10666	1759574205788201426	/root/Cuda-Kernels/softmax-kernel/build/temp.linux-x86_64-cpython-311/src/softmax_ops.o	be7e829af11f25b0

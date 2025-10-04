@@ -1,0 +1,4 @@
+# ninja log v7
+0	5026	1759574887498950011	/root/Cuda-Kernels/rmsnorm-kernel/build/temp.linux-x86_64-cpython-311/src/naive_rmsnorm.o	ed6d9221c8a7613b
+0	5030	1759574887498950011	/root/Cuda-Kernels/rmsnorm-kernel/build/temp.linux-x86_64-cpython-311/src/optimized_rmsnorm.o	2783b18c269cbe89
+0	10788	1759574887498950011	/root/Cuda-Kernels/rmsnorm-kernel/build/temp.linux-x86_64-cpython-311/src/rmsnorm_ops.o	9ef1744639467b44

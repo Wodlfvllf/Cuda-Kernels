@@ -1,0 +1,8 @@
+setup.py
+groupnorm_cuda.egg-info/PKG-INFO
+groupnorm_cuda.egg-info/SOURCES.txt
+groupnorm_cuda.egg-info/dependency_links.txt
+groupnorm_cuda.egg-info/top_level.txt
+src/groupnorm.cu
+src/groupnorm_ops.cpp
+tests/test_correctness.py
